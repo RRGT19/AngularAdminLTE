@@ -2,26 +2,62 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.7.
 
+## First steps
+
+Run `npm install` inside your project folder.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Adding content to a new component (page)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After you run `ng g c components/example` to create a new component, open the `example.component.html` file and paste this lines:
+```html
+<!-- Content Header (Page header) -->
+<section class="content-header">
 
-## Build
+  <h1 *ngIf="title">{{title}}
+    <small *ngIf="subTitle">{{subTitle}}</small>
+  </h1>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+</section>
+<!-- content-header -->
 
-## Running unit tests
+<!-- Main content -->
+<section class="content">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  <!-- PUT YOUR CONTENT BELOW THIS LINE ================================================== -->
 
-## Running end-to-end tests
+  Hello world
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  <!-- END OF YOUR CONTENT ================================================== -->
 
-## Further help
+</section>
+<!-- /.content -->
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Open your `example.component.ts` and paste this lines **inside of the class**:
+```typescript
+title = 'Example';
+subTitle = 'Version 2.0';
+```
+
+Finally, don't forget to include a new menu (a link) inside of `sidebar.component.html`.
+
+
+## Components already created within this repository
+```bash
+├───components
+│   ├───control-sidebar
+│   ├───dashboard
+│   ├───footer
+│   ├───header
+│   ├───login
+│   ├───page-not-found
+│   ├───register
+│   ├───sidebar
+│   └───user-profile
+├───guards
+└───services
+```
