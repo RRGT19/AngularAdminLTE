@@ -46,7 +46,7 @@ subTitle = 'Version 2.0';
 Finally, don't forget to include a new menu (a link) inside of `sidebar.component.html`.
 
 
-## Components already created within this repository
+## Structure of this repository
 ```bash
 ├───components
 │   ├───control-sidebar
