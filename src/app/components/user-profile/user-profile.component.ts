@@ -8,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class UserProfileComponent implements OnInit {
 
   title = 'User Profile';
+  subTitle = '';
 
   constructor() { }
 
