@@ -1,0 +1,21 @@
+<div class="wrapper" *ngIf="authService.isLoggedIn()">
+
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <router-outlet></router-outlet>
+
+  </div>
+  <!-- /.content-wrapper -->
+
+  <app-footer></app-footer>
+  <app-control-sidebar></app-control-sidebar>
+</div>
+<!-- ./wrapper -->
+
+<div *ngIf="!authService.isLoggedIn()">
+  <router-outlet></router-outlet>
+</div>
