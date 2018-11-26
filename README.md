@@ -45,7 +45,6 @@ subTitle = 'Version 2.0';
 
 Finally, don't forget to include a new menu (a link) inside of `sidebar.component.html`.
 
-
 ## Structure of this repository
 ```bash
 ├───components
@@ -61,3 +60,6 @@ Finally, don't forget to include a new menu (a link) inside of `sidebar.componen
 ├───guards
 └───services
 ```
+
+## Route Guards of this repository
+We use an **Auth Service** and an **Auth Guard** to control the access to specific pages to prevent not-authenticated users see them. Right now, inside of `src/app/services/auth.service.ts` we have **userDetails = 1**, this means that the current user is authenticated and you can navigate to any page of the website. To access the **login** and **register** page, change **userDetails** to **null**.
