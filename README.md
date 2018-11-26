@@ -62,4 +62,4 @@ Finally, don't forget to include a new menu (a link) inside of `sidebar.componen
 ```
 
 ## Route Guards of this repository
-We use an **Auth Service** and an **Auth Guard** to control the access to specific pages to prevent not-authenticated users see them. Right now, inside of `src/app/services/auth.service.ts` we have **userDetails = 1**, this means that the current user is authenticated and you can navigate to any page of the website. To access the **login** and **register** page, change **userDetails** to **null**.
+We use an **Auth Service** and an **Auth Guard** to control the access to specific pages to prevent not-authenticated users to see them. Right now, inside of `src/app/services/auth.service.ts` we have **userDetails = 1**, this means that the current user is authenticated and you can navigate to any page of the website. To access the **login** and **register** page, change **userDetails** to **null**.
